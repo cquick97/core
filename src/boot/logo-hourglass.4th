@@ -1,5 +1,5 @@
 \ Copyright (c) 2006-2015 Devin Teske <dteske@FreeBSD.org>
-\ Copyright (c) 2016-2017 Deciso B.V.
+\ Copyright (c) 2016 Deciso B.V.
 \ All rights reserved.
 \
 \ Redistribution and use in source and binary forms, with or without
@@ -36,22 +36,21 @@
 
 : logo ( x y -- ) \ color hourglass logo (15 rows x 32 columns)
 
-	s" #[37;1m  @@@@@@@@@@@@@@@@@@@@@@@@@@@@" logo+
-	s" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" logo+
-	s" @@@@@                    @@@@@" logo+
-	s"     @@@@@            @@@@@    " logo+
-	s"  @@@@@@@@@@@       @@@@@@@@@@@" logo+
-	s"       #[31;1m\\\\\         /////     " logo+
-	s" ))))))))))))       (((((((((((" logo+
-	s"       /////         \\\\\     #[m" logo+
-	s" #[37;1m @@@@@@@@@@@       @@@@@@@@@@@" logo+
-	s"     @@@@@            @@@@@    " logo+
-	s" @@@@@                    @@@@@" logo+
-	s" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" logo+
-	s" @@@@@@@@@@@@@@@@@@@@@@@@@@@@  " logo+
-	s" testing......                 " logo+
+	s" #[33;1m                              " logo+
+	s"         _____________         " logo+
+	s"     /\_/             \_/\     " logo+
+	s"     \                   /     " logo+
+	s"     /                   \     " logo+
+	s"    #[33;1m|    __          __   |" logo+
+	s"    |   \___\      /___/  |    " logo+
+	s"     \                   /     #[m" logo+
+	s" #[33;1m     \      __ __      /      " logo+
+	s"       \__  \_   _/  __/       " logo+
+	s"          \___| |___/          " logo+
+	s"             _____             " logo+
+	s"             \___/             " logo+
 	s"  #[m                              " logo+
-	s"   18.1  ``Insert Name Here''  #[m" logo+
+	s"    1.0  ``Lawful Leopard''    #[m" logo+
 
 	2drop
 ;
