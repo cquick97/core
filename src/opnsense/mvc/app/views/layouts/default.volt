@@ -13,7 +13,7 @@
     <meta name="copyright" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <title>{{title|default("OPNsense") }}</title>
+    <title>{{headTitle|default("OPNsense") }} | {{system_hostname}}.{{system_domain}}</title>
     {% set theme_name = ui_theme|default('opnsense') %}
 
     <!-- include (theme) style -->
@@ -231,52 +231,45 @@
   </header>
 
   <main class="page-content col-sm-9 col-sm-push-3 col-lg-10 col-lg-push-2">
-
-    <!-- menu system -->
-    {{ partial("layout_partials/base_menu_system") }}
-
-    <div class="row">
-            <!-- page header -->
-      <header class="page-content-head">
-        <div class="container-fluid">
+      <!-- menu system -->
+      {{ partial("layout_partials/base_menu_system") }}
+      <div class="row">
+        <!-- page header -->
+        <header class="page-content-head">
+          <div class="container-fluid">
             <ul class="list-inline">
-              <li class="__mb"><h1>{{title | default("")}}</h1></li>
-
-              <li class="btn-group-container" id="service_status_container">
-                                <!-- placeholder for service status buttons -->
-              </li>
+              <li><h1>{{title | default("")}}</h1></li>
+              <li class="btn-group-container" id="service_status_container"></li>
             </ul>
-        </div>
-      </header>
-            <!-- page content -->
-      <section class="page-content-main">
-        <div class="container-fluid">
-          <div class="row">
-              <section class="col-xs-12">
-                  <div id="messageregion"></div>
-                      {{ content() }}
-              </section>
           </div>
-        </div>
-      </section>
-
-    </div>
-
-        <!-- page footer -->
-    <footer class="page-foot col-sm-push-3 col-lg-push-2">
-      <div class="container-fluid">
-        <a target="_blank" href="{{ product_website }}" class="redlnk">{{ product_name }}</a>
-        (c) {{ product_copyright_years }}
-        <a href="{{ product_copyright_url }}" class="tblnk">{{ product_copyright_owner }}</a>
+        </header>
+        <!-- page content -->
+        <section class="page-content-main">
+          <div class="container-fluid">
+            <div class="row">
+                <section class="col-xs-12">
+                    <div id="messageregion"></div>
+                        {{ content() }}
+                </section>
+            </div>
+          </div>
+        </section>
       </div>
-    </footer>
-
-  </main>
+      <!-- page footer -->
+      <footer class="page-foot col-sm-push-3 col-lg-push-2">
+        <div class="container-fluid">
+          <a target="_blank" href="{{ product_website }}" class="redlnk">{{ product_name }}</a>
+          (c) {{ product_copyright_years }}
+          <a href="{{ product_copyright_url }}" class="tblnk">{{ product_copyright_owner }}</a>
+        </div>
+      </footer>
+    </main>
 
     <!-- bootstrap script -->
-  <script type="text/javascript" src="/ui/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/ui/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="/ui/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/ui/js/bootstrap-select.min.js"></script>
     <!-- bootstrap dialog -->
     <script src="/ui/js/bootstrap-dialog.min.js"></script>
-    </body>
+
+  </body>
 </html>

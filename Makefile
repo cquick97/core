@@ -132,6 +132,7 @@ CORE_DEPENDS?=		${CORE_DEPENDS_${CORE_ARCH}} \
 			strongswan \
 			sudo \
 			suricata \
+			syslog-ng \
 			syslogd \
 			unbound \
 			wpa_supplicant \
@@ -314,6 +315,11 @@ style-fix: want-pear-PHP_CodeSniffer
 
 license:
 	@${.CURDIR}/Scripts/license > ${.CURDIR}/LICENSE
+
+dhparam:
+.for BITS in 1024 2048 4096
+	openssl dhparam -out ${.CURDIR}/src/etc/dh-parameters.${BITS} ${BITS}
+.endfor
 
 test: want-phpunit6
 	@cd ${.CURDIR}/src/opnsense/mvc/tests && \

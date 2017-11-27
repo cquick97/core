@@ -40,7 +40,11 @@
 /usr/local/etc/inc/plugins.inc.d/ntpd.inc
 /usr/local/etc/inc/plugins.inc.d/openssh.inc
 /usr/local/etc/inc/plugins.inc.d/openvpn.inc
+/usr/local/etc/inc/plugins.inc.d/openvpn/attributes.sh
 /usr/local/etc/inc/plugins.inc.d/openvpn/auth-user.php
+/usr/local/etc/inc/plugins.inc.d/openvpn/ovpn-linkdown
+/usr/local/etc/inc/plugins.inc.d/openvpn/ovpn-linkup
+/usr/local/etc/inc/plugins.inc.d/openvpn/ovpn_auth_verify
 /usr/local/etc/inc/plugins.inc.d/openvpn/tls-verify.php
 /usr/local/etc/inc/plugins.inc.d/openvpn/wizard.inc
 /usr/local/etc/inc/plugins.inc.d/pf.inc
@@ -348,6 +352,7 @@
 /usr/local/opnsense/mvc/app/controllers/OPNsense/Cron/forms/dialogEdit.xml
 /usr/local/opnsense/mvc/app/controllers/OPNsense/Diagnostics/ActivityController.php
 /usr/local/opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/ActivityController.php
+/usr/local/opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/DnsController.php
 /usr/local/opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/FirewallController.php
 /usr/local/opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/InterfaceController.php
 /usr/local/opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/NetflowController.php
@@ -362,7 +367,6 @@
 /usr/local/opnsense/mvc/app/controllers/OPNsense/IDS/Api/ServiceController.php
 /usr/local/opnsense/mvc/app/controllers/OPNsense/IDS/Api/SettingsController.php
 /usr/local/opnsense/mvc/app/controllers/OPNsense/IDS/IndexController.php
-/usr/local/opnsense/mvc/app/controllers/OPNsense/IDS/forms/dialogAlert.xml
 /usr/local/opnsense/mvc/app/controllers/OPNsense/IDS/forms/dialogRule.xml
 /usr/local/opnsense/mvc/app/controllers/OPNsense/IDS/forms/dialogRuleset.xml
 /usr/local/opnsense/mvc/app/controllers/OPNsense/IDS/forms/dialogUserDefined.xml
@@ -736,6 +740,7 @@
 /usr/local/opnsense/service/templates/OPNsense/Sample/sub2/example_sub2.txt
 /usr/local/opnsense/service/templates/OPNsense/Syslog/+TARGETS
 /usr/local/opnsense/service/templates/OPNsense/Syslog/newsyslog.conf
+/usr/local/opnsense/service/templates/OPNsense/Syslog/syslog-ng.conf
 /usr/local/opnsense/service/templates/OPNsense/WebGui/+TARGETS
 /usr/local/opnsense/service/templates/OPNsense/WebGui/php.etc.ini
 /usr/local/opnsense/service/templates/OPNsense/WebGui/php.ini
@@ -783,7 +788,8 @@
 /usr/local/opnsense/www/js/bootstrap3-typeahead.min.js
 /usr/local/opnsense/www/js/d3.min.js
 /usr/local/opnsense/www/js/d3.min.js.LICENSE
-/usr/local/opnsense/www/js/jquery-1.12.4.min.js
+/usr/local/opnsense/www/js/jquery-3.2.1.min.js
+/usr/local/opnsense/www/js/jquery-migrate-3.0.1.min.js
 /usr/local/opnsense/www/js/jquery-sortable.js
 /usr/local/opnsense/www/js/jquery.bootgrid.LICENSE
 /usr/local/opnsense/www/js/jquery.bootgrid.js
@@ -920,13 +926,9 @@
 /usr/local/sbin/dhclient-script.ext
 /usr/local/sbin/mpd.script
 /usr/local/sbin/ntpdate_sync_once.sh
-/usr/local/sbin/openvpn.attributes.sh
 /usr/local/sbin/opnsense-auth
 /usr/local/sbin/opnsense-importer
 /usr/local/sbin/opnsense-installer
-/usr/local/sbin/ovpn-linkdown
-/usr/local/sbin/ovpn-linkup
-/usr/local/sbin/ovpn_auth_verify
 /usr/local/sbin/ping_hosts.sh
 /usr/local/sbin/pluginctl
 /usr/local/sbin/ppp-linkdown
@@ -957,7 +959,6 @@
 /usr/local/www/diag_logs_dhcp.php
 /usr/local/www/diag_logs_dnsmasq.php
 /usr/local/www/diag_logs_filter.php
-/usr/local/www/diag_logs_filter_dynamic.php
 /usr/local/www/diag_logs_filter_plain.php
 /usr/local/www/diag_logs_filter_summary.php
 /usr/local/www/diag_logs_gateways.php
@@ -1026,9 +1027,7 @@
 /usr/local/www/interfaces_vlan_edit.php
 /usr/local/www/interfaces_wireless.php
 /usr/local/www/interfaces_wireless_edit.php
-/usr/local/www/javascript/filter_log.js
 /usr/local/www/javascript/opnsense_legacy.js
-/usr/local/www/javascript/ticker.js
 /usr/local/www/javascript/wizard/autosuggest.js
 /usr/local/www/javascript/wizard/disablekeys.js
 /usr/local/www/javascript/wizard/suggestions.js
